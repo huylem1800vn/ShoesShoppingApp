@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class Product {
     public int id;
     public String name;
+    @SerializedName("brand_name")
     public String brand;
     public double price;
     @SerializedName("promotional_price")

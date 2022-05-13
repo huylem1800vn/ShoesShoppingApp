@@ -4,19 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.setting.SettingFragment">
+    tools:context=".ui.setting.SettingFragment"
+    android:background="?attr/background_color">
 
-    <TextView
-        android:id="@+id/text_setting"
+    <LinearLayout
+        android:id="@+id/lnlDarkMode"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Chế độ ban đêm"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:paddingTop="10dp"
+            android:textColor="?attr/text_color"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/baloo_tamma_2_regular"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/switch_dark_mode"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:lottie_rawRes="@raw/ani_switch"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnlDarkMode">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/language"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:paddingTop="10dp"
+            android:textColor="?attr/text_color"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/baloo_tamma_2_regular"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:id="@+id/filled_exposed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

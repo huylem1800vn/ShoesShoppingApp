@@ -5,13 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
+        android:name=".localdata.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Light">
+        android:theme="@style/Theme.LTDD_CS92_Nhom6_ShoesShoppingApp"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"

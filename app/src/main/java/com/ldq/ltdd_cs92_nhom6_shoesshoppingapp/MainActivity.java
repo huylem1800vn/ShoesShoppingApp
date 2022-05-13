@@ -12,7 +12,9 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,6 +26,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.ActivityMainBinding;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.localdata.DataLocalManager;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.brands.BrandsFragment;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.gallery.GalleryFragment;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.home.HomeFragment;
@@ -32,6 +35,7 @@ import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.setting.SettingFragment;
 public class MainActivity extends AppCompatActivity{
 
     private ActivityMainBinding binding;
+    private DrawerLayout drawer;
     private static final int FRAGMENT_HOME = 0;
     private static final int FRAGMENT_ORDERS = 1;
     private static final int FRAGMENT_BRANDS = 2;
@@ -44,16 +48,25 @@ public class MainActivity extends AppCompatActivity{
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        boolean i = DataLocalManager.getVietNameseLanguage();
+        if(DataLocalManager.getVietNameseLanguage()){
+            Utils.setLocale("vi", this);
+        } else {
+            Utils.setLocale("en", this);
+        }
 
-        setSupportActionBar(binding.appBarMain.toolbar);
+        Toolbar toolbar = binding.appBarMain.toolbar;
+        setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = binding.drawerLayout;
+        drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,
                 binding.appBarMain.toolbar, R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        setMenuButton();
 
         View header = navigationView.inflateHeaderView(R.layout.nav_header_main);
         LinearLayout home = header.findViewById(R.id.home);
@@ -112,5 +125,31 @@ public class MainActivity extends AppCompatActivity{
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.nav_host_fragment_content_main, fragment);
         transaction.commit();
+    }
+
+    public void setBackButton(){
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        binding.appBarMain.toolbar.setNavigationIcon(R.drawable.ic_back);
+
+        binding.appBarMain.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().popBackStack();
+                setMenuButton();
+            }
+        });
+    }
+
+    private void setMenuButton(){
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        binding.appBarMain.toolbar.setNavigationIcon(R.drawable.ic_menu);
+        binding.appBarMain.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.openDrawer(GravityCompat.START);
+            }
+        });
     }
 }

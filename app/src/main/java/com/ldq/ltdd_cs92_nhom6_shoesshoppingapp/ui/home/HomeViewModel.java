@@ -34,8 +34,6 @@ public class HomeViewModel extends ViewModel {
         AddListPhoto();
     }
 
-
-
     private void AddListPhoto() {
         photolist.add("https://i.pinimg.com/564x/09/9b/18/099b1881915da67f7c00af4f093d7013.jpg");
         photolist.add("https://i.pinimg.com/564x/5d/d5/5c/5dd55c383ade34f2a2970f283ffd3661.jpg");

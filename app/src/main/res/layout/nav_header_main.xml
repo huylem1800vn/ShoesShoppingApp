@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="?attr/background_color_primary">
+        android:background="?attr/background_color">
 
         <LinearLayout
             android:id="@+id/home"
@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Home"
+                android:text="@string/home"
                 android:textSize="20dp"
                 android:gravity="center_vertical"
                 android:fontFamily="@font/baloo_tamma_2_regular"
@@ -59,7 +59,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Orders"
+                android:text="@string/orders"
                 android:textSize="20dp"
                 android:gravity="center_vertical"
                 android:fontFamily="@font/baloo_tamma_2_regular"
@@ -83,7 +83,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Brands"
+                android:text="@string/brands"
                 android:textSize="20dp"
                 android:gravity="center_vertical"
                 android:fontFamily="@font/baloo_tamma_2_regular"
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Setting"
+                android:text="@string/setting"
                 android:textSize="20dp"
                 android:gravity="center_vertical"
                 android:fontFamily="@font/baloo_tamma_2_regular"

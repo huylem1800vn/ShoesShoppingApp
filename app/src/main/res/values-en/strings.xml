@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shoes Shopping</string>
+    <string name="setting">Setting</string>
+    <string name="home">Home</string>
+    <string name="brands">Brands</string>
+    <string name="orders">Orders</string>
+    <string name="selling">Selling</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="english">English</string>
+    <string name="language">Language</string>
+    <string name="brand_name">Brand name:</string>
+    <string name="description">Description:</string>
+    <string name="search_question">What do you want to search?</string>
+    <string name="add_to_cart">ADD TO CART</string>
+</resources>

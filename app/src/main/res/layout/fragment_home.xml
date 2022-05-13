@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
     android:orientation="vertical"
-    android:background="?attr/background_color_primary">
+    android:background="?attr/background_color">
 
     <EditText
         android:id="@+id/title_search"
@@ -16,11 +16,12 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/bg_search_manage"
-        android:hint="Bạn muốn tìm gì?"
+        android:hint="@string/search_question"
         android:paddingTop="5dp"
         android:paddingLeft="20dp"
         android:textSize="18sp"
         android:textColor="@color/primary"
+        android:textCursorDrawable="@drawable/color_cursor"
         android:fontFamily="@font/baloo_tamma_2_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="BÁN CHẠY"
+        android:text="@string/selling"
         android:textStyle="bold"
         android:paddingTop="10dp"
         android:fontFamily="@font/baloo_tamma_2_regular"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shoes Shopping</string>
+    <string name="setting">Cài đặt</string>
+    <string name="home">Trang chủ</string>
+    <string name="brands">Thương hiệu</string>
+    <string name="orders">Hóa đơn</string>
+    <string name="selling">Bán chạy</string>
+    <string name="vietnamese">Tiếng việt</string>
+    <string name="english">Tiếng anh</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="brand_name">Tên thương hiệu:</string>
+    <string name="description">Mô tả:</string>
+    <string name="search_question">Bạn muốn tìm gì?</string>
+    <string name="add_to_cart">THÊM VÀO GIỎ</string>
+</resources>
