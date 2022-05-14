@@ -11,13 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.LTDD_CS92_Nhom6_ShoesShoppingApp">
-<<<<<<< HEAD
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-=======
         <androidx.constraintlayout.widget.ConstraintLayout
->>>>>>> devhuy
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.Toolbar

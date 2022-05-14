@@ -13,8 +13,6 @@
     <string name="description">Mô tả:</string>
     <string name="search_question">Bạn muốn tìm gì?</string>
     <string name="add_to_cart">THÊM VÀO GIỎ</string>
-<<<<<<< HEAD
-=======
     <string name="quantity">Số lượng:</string>
     <string name="empty_cart">Giỏ hàng trống</string>
     <string name="confirm">Xác nhận</string>
@@ -34,5 +32,4 @@
     <string name="delete_question_dialog">Bạn có chắc muốn xóa sản phẩm này?</string>
     <string name="order_done">Đặt hàng thành công!</string>
     <string name="error_data">Dữ liệu chưa đủ!</string>
->>>>>>> devhuy
 </resources>

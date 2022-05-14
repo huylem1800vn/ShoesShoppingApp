@@ -13,12 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LTDD_CS92_Nhom6_ShoesShoppingApp"
-<<<<<<< HEAD
-        android:usesCleartextTraffic="true"
-        android:largeHeap="true">
-=======
         android:usesCleartextTraffic="true">
->>>>>>> devhuy
         <activity
             android:name=".MainActivity"
             android:exported="true"

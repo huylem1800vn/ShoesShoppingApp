@@ -23,8 +23,6 @@
     <string name='description'>Description:</string>
     <string name='search_question'>What do you want to search?</string>
     <string name='add_to_cart'>ADD TO CART</string>
-<<<<<<< HEAD
-=======
     <string name='customer_name'>Customer name:</string>
     <string name='address'>Address:</string>
     <string name='phone'>Phone:</string>
@@ -34,13 +32,10 @@
     <string name='confirm'>Confirm</string>
     <string name='empty_cart'>Empty cart</string>
     <string name='quantity'>Quantity:</string>
->>>>>>> devhuy
     <string-array name="language_array">
         <item>@string/vietnamese</item>
         <item>@string/english</item>
     </string-array>
-<<<<<<< HEAD
-=======
     <string name="customer_information">Customer information</string>
     <string name="minimum_limit_dialog">The minimum purchase quantity for this product is 1</string>
     <string name="maximum_limit_dialog">The maximum purchase quantity for this product is 10</string>
@@ -51,5 +46,4 @@
     <string name="no">No</string>
     <string name="order_done">Order Success!</string>
     <string name="error_data">Not enough data!</string>
->>>>>>> devhuy
 </resources>

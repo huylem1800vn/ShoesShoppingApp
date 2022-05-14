@@ -26,11 +26,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
-<<<<<<< HEAD
-=======
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
->>>>>>> devhuy
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -44,11 +41,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.ActivityMainBinding;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.localdata.DataLocalManager;
-<<<<<<< HEAD
-=======
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.model.Cart;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.brands.BrandDetailFragment;
->>>>>>> devhuy
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.brands.BrandsFragment;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.gallery.GalleryFragment;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.home.CartFragment;
@@ -75,17 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-<<<<<<< HEAD
-        boolean i = DataLocalManager.getVietNameseLanguage();
-        if(DataLocalManager.getVietNameseLanguage()){
-=======
         // khởi tạo giỏ hàng
         if (carts == null) {
             carts = new ArrayList<>();
         }
         boolean i = DataLocalManager.getVietNameseLanguage();
         if (DataLocalManager.getVietNameseLanguage()) {
->>>>>>> devhuy
             Utils.setLocale("vi", this);
         } else {
             Utils.setLocale("en", this);
@@ -168,11 +157,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-<<<<<<< HEAD
-    public void setBackButton(){
-=======
     public void setBackButton() {
->>>>>>> devhuy
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         binding.appBarMain.toolbar.setNavigationIcon(R.drawable.ic_back);
@@ -186,9 +171,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-<<<<<<< HEAD
-    private void setMenuButton(){
-=======
     public void setMenuButton() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         if (fragmentManager.getBackStackEntryCount() <= 1) {
@@ -222,7 +204,6 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager.BackStackEntry entry = fragmentManager.getBackStackEntryAt(0);
             fragmentManager.popBackStack(entry.getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
->>>>>>> devhuy
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         binding.appBarMain.toolbar.setNavigationIcon(R.drawable.ic_menu);
@@ -233,8 +214,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-<<<<<<< HEAD
-=======
 
     public void createNotification(){
 //        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
@@ -250,5 +229,4 @@ public class MainActivity extends AppCompatActivity {
 //            notificationManager.notify(1, notification);
 //        }
     }
->>>>>>> devhuy
 }

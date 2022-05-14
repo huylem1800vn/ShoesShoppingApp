@@ -13,8 +13,6 @@
     <string name="description">Description:</string>
     <string name="search_question">What do you want to search?</string>
     <string name="add_to_cart">ADD TO CART</string>
-<<<<<<< HEAD
-=======
     <string name="quantity">Quantity:</string>
     <string name="empty_cart">Empty cart</string>
     <string name="confirm">Confirm</string>
@@ -34,5 +32,4 @@
     <string name="no">No</string>
     <string name="order_done">Order Success!</string>
     <string name="error_data">Not enough data!</string>
->>>>>>> devhuy
 </resources>
