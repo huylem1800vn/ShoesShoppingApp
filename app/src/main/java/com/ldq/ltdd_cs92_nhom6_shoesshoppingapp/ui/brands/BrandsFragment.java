@@ -1,38 +1,91 @@
 package com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ui.brands;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.MainActivity;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.R;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.adapter.BrandAdapter;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.FragmentBrandsBinding;
-import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.FragmentGalleryBinding;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.model.Brand;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ultil.SOService;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ultil.Server;
 
-public class BrandsFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class BrandsFragment extends Fragment implements BrandAdapter.OnBrandListener {
+    private RecyclerView recyclerView;
+    private List<Brand> brandList;
+    private SOService soService;
     private FragmentBrandsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        BrandsViewModel brandsViewModel =
-                new ViewModelProvider(this).get(BrandsViewModel.class);
 
         binding = FragmentBrandsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+        brandList = new ArrayList<>();
+        soService = Server.getSOService();
+        recyclerView = binding.recycleViewBrands;
 
-        final TextView textView = binding.textBrands;
-        brandsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        GetAllBrand();
         return root;
+    }
+
+    private void GetAllBrand() {
+        soService.getBrands().enqueue(new Callback<List<Brand>>() {
+            @Override
+            public void onResponse(Call<List<Brand>> call, Response<List<Brand>> response) {
+                if (response.isSuccessful()) {
+                    brandList = response.body();
+                    recyclerView.setHasFixedSize(true);
+                    recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+                    recyclerView.setAdapter(new BrandAdapter(getActivity(), BrandsFragment.this, (ArrayList<Brand>) brandList));
+                } else {
+                    Log.d("MainActivity", "fail load API Get Brand List");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Brand>> call, Throwable t) {
+                Log.d("MainActivity", "error loading from API Get Brand List");
+            }
+
+        });
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void onBrandClick(int position) {
+        MainActivity mainActivity = (MainActivity) getActivity();
+        mainActivity.setBackButton();
+        Bundle bundle = new Bundle();
+        bundle.putString("brandID", String.valueOf(brandList.get(position).getId())); // Put anything what you want
+        BrandDetailFragment brandDetailFragment = new BrandDetailFragment();
+        brandDetailFragment.setArguments(bundle);
+        String backStateName = brandDetailFragment.getClass().getName();
+        getParentFragmentManager()
+                .beginTransaction()
+                .replace(R.id.nav_host_fragment_content_main, brandDetailFragment)
+                .addToBackStack(backStateName)
+                .commit();
     }
 }
