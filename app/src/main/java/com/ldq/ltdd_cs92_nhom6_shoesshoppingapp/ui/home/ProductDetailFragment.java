@@ -16,9 +16,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+<<<<<<< HEAD
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.R;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.adapter.PhotoAdapter;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.FragmentProductDetailBinding;
+=======
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.MainActivity;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.R;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.adapter.PhotoAdapter;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.databinding.FragmentProductDetailBinding;
+import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.model.Cart;
+>>>>>>> devhuy
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.model.Photo;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.model.Product;
 import com.ldq.ltdd_cs92_nhom6_shoesshoppingapp.ultil.SOService;
@@ -37,6 +45,10 @@ public class ProductDetailFragment extends Fragment {
     private ViewPager viewPager;
     private PhotoAdapter photoAdapter;
     private FragmentProductDetailBinding binding;
+<<<<<<< HEAD
+=======
+    private Product product;
+>>>>>>> devhuy
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,7 +59,10 @@ public class ProductDetailFragment extends Fragment {
 
         if(bundle != null){
             int productID = Integer.parseInt(bundle.getString("productID"));
+<<<<<<< HEAD
             Toast.makeText(getContext(), ""+productID, Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> devhuy
             getProductDetail(productID);
         }
         // load size
@@ -62,7 +77,11 @@ public class ProductDetailFragment extends Fragment {
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+<<<<<<< HEAD
                 Toast.makeText(getContext(), ""+size[position], Toast.LENGTH_SHORT).show();
+=======
+
+>>>>>>> devhuy
             }
         });
 
@@ -70,7 +89,45 @@ public class ProductDetailFragment extends Fragment {
         binding.btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
 
+=======
+                int size = Integer.parseInt(binding.sizeProduct.getText().toString());
+                double price = product.getPromotionalPrice();
+                int id = product.getId();
+                if(MainActivity.carts.size() > 0){
+                    boolean exists = false;
+                    for(int i = 0; i < MainActivity.carts.size(); i++){
+                        Cart cart = MainActivity.carts.get(i);
+                        if(cart.getProductID() == id && cart.getSize() == size){
+                            // nếu sản phẩm này đã có trong giỏ hàng rồi
+                            // set lại số lượng tăng 1 và tính lại tổng tiền totalAmount
+                            cart.setQuantity(cart.getQuantity()+1);
+                            if(cart.getQuantity() >= 10){
+                                cart.setQuantity(10);
+                                String text = getResources().getString(R.string.minimum_limit_dialog);
+                                Toast.makeText(getContext(), text, Toast.LENGTH_SHORT).show();
+                            }
+                            cart.setTotalAmount(price * cart.getQuantity());
+                            exists = true;
+                        }
+                    }
+                    if(exists == false){
+                        // nếu sản phẩm này chưa được thêm vào giỏ hàng
+                        double totalAmount = price;
+                        MainActivity.carts.add(new Cart(id, product.getName(),
+                                product.getImage1(), size, 1, price, totalAmount));
+                    }
+                } else {
+                    // thêm 1 sản phẩm vào giỏ hàng khi giỏ hàng chưa có sản phẩm nào
+                    double totalAmount = price;
+                    MainActivity.carts.add(new Cart(id, product.getName(),
+                            product.getImage1(), size, 1, price, totalAmount));
+                }
+                // hiện số lượng sản phẩm trên giỏ hàng
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.showNumberProductInCart();
+>>>>>>> devhuy
             }
         });
         return root;
@@ -81,7 +138,11 @@ public class ProductDetailFragment extends Fragment {
             @Override
             public void onResponse(Call<Product> call, Response<Product> response) {
                 if (response.isSuccessful()) {
+<<<<<<< HEAD
                     Product product = response.body();
+=======
+                    product = response.body();
+>>>>>>> devhuy
                     binding.nameProductDetail.setText(product.getName());
                     binding.descriptionProduct.setText(product.getDescription());
                     binding.priceProduct.setText(String.format("%,.0f₫", product.getPrice()));
