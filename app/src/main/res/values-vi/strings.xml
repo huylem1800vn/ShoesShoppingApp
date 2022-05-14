@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shoes Shopping</string>
+    <string name="setting">Cài đặt</string>
+    <string name="home">Trang chủ</string>
+    <string name="brands">Thương hiệu</string>
+    <string name="orders">Hóa đơn</string>
+    <string name="selling">Bán chạy</string>
+    <string name="vietnamese">Tiếng việt</string>
+    <string name="english">Tiếng anh</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="brand_name">Tên thương hiệu:</string>
+    <string name="description">Mô tả:</string>
+    <string name="search_question">Bạn muốn tìm gì?</string>
+    <string name="add_to_cart">THÊM VÀO GIỎ</string>
+    <string name="quantity">Số lượng:</string>
+    <string name="empty_cart">Giỏ hàng trống</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="order">Đặt hàng</string>
+    <string name="total_amount">Thành tiền:</string>
+    <string name="order_date">Ngày đặt hàng:</string>
+    <string name="phone">Số điện thoại:</string>
+    <string name="address">Địa chỉ:</string>
+    <string name="customer_name">Tên khách hàng:</string>
+    <string name="customer_information">Thông tin khách hàng</string>
+    <string name="minimum_limit_dialog">Sô lượng mua tối thiếu cho sản phẩm này là 1</string>
+    <string name="maximum_limit_dialog">Sô lượng mua tối đa cho sản phẩm này là 10</string>
+    <string name="your_cart_has_no_products">Giỏ hàng của bạn chưa có sản phẩm!</string>
+    <string name="delete_title_dialog">Xác nhận xóa sản phẩm</string>
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="delete_question_dialog">Bạn có chắc muốn xóa sản phẩm này?</string>
+    <string name="order_done">Đặt hàng thành công!</string>
+    <string name="error_data">Dữ liệu chưa đủ!</string>
+</resources>

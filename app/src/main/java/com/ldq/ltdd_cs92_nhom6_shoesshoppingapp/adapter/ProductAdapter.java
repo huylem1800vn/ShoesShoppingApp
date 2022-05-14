@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,16 +24,18 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHolder> {
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHolder> implements Filterable {
 
    private final ArrayList<Product> arrayProduct;
    private final OnProductListener onProductListener;
+   private final ArrayList<Product> backUpArrayProduct;
    private final Context context;
 
    public ProductAdapter(Context context, OnProductListener onProductListener, ArrayList<Product> productList) {
       this.arrayProduct = productList;
       this.onProductListener = onProductListener;
       this.context = context;
+      this.backUpArrayProduct = new ArrayList<>(productList);
    }
 
    @NonNull
@@ -61,6 +65,38 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ItemHold
    public int getItemCount() {
       return arrayProduct.size();
    }
+
+   @Override
+   public Filter getFilter() {
+      return filter;
+   }
+
+   private Filter filter = new Filter() {
+      @Override
+      protected FilterResults performFiltering(CharSequence constraint) {
+         ArrayList<Product> filterList = new ArrayList<>();
+         if(constraint.length() == 0){
+            filterList.addAll(backUpArrayProduct);
+         } else {
+            String filterPattern = constraint.toString().toLowerCase().trim();
+            for (Product p : backUpArrayProduct){
+               if(p.getName().toLowerCase().trim().contains(filterPattern)){
+                  filterList.add(p);
+               }
+            }
+         }
+         FilterResults results = new FilterResults();
+         results.values = filterList;
+         return results;
+      }
+
+      @Override
+      protected void publishResults(CharSequence constraint, FilterResults results) {
+         arrayProduct.clear();
+         arrayProduct.addAll((ArrayList<Product>) results.values);
+         notifyDataSetChanged();
+      }
+   };
 
    public static class ItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
       ImageView image;

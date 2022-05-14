@@ -10,15 +10,37 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Light">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        android:theme="@style/Theme.LTDD_CS92_Nhom6_ShoesShoppingApp">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/primary"
-            app:titleTextColor="@color/white"
-            android:theme="@style/ToolBarStyle" />
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primary"
+                app:titleTextColor="@color/white"
+                android:theme="@style/ToolBarStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:id="@+id/product_number_cart"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:text="3"
+                android:fontFamily="@font/baloo_tamma_2_regular"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_product_number_cart"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
