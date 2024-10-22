@@ -1,0 +1,122 @@
+[33mcommit 08c8d1c2d935f4d05d4f76ec6b0fc859ce5b4012[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Tue Oct 22 08:50:33 2024 +0700
+
+    Initial commit for ShoesShoppingApp
+
+[33mcommit 5edb45f65e28a96893063fe0ce067a24f85ee0d6[m
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Mon May 16 22:40:20 2022 +0700
+
+    add folder api write by PHP
+
+[33mcommit 08353bcd02aced2f97d316be1d308736de753080[m
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Sun May 15 01:52:57 2022 +0700
+
+    fix conflict during merge branch
+
+[33mcommit c8951d2d34c180d41412fc694c2fde2b6e88ef56[m
+Merge: 15f4359 55338f0
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Sun May 15 01:39:33 2022 +0700
+
+    merge branch devhuy into develop
+
+[33mcommit 55338f0e15515581e07b09582a92503c65e412f4[m[33m ([m[1;31morigin/devhuy[m[33m)[m
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Sun May 15 01:37:52 2022 +0700
+
+    add order, order detail, cart, customer information screen
+
+[33mcommit 15f4359c41f5126bf786e78bb7f23fd9099e8679[m
+Merge: 7ce66f3 773fdf2
+Author: huylem1800vn <huylem1800vn@gmail.com>
+Date:   Sun May 15 01:03:54 2022 +0700
+
+    merge branch devtam into develop
+
+[33mcommit 7ce66f384fc8db7dcbec5cadc3b8b03fb7a786b9[m
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Sun May 15 00:26:21 2022 +0700
+
+    update file report and file script database
+
+[33mcommit 773fdf2097475ca001289833e1e9b21ad07eb429[m[33m ([m[1;31morigin/devtam[m[33m)[m
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Sun May 15 00:23:12 2022 +0700
+
+    update file report and file script database
+
+[33mcommit 1489a7e1c88da47022674d2e0908beed57f848bc[m
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Sat May 14 02:28:35 2022 +0700
+
+    add setting, product detail, brand list, brand detail screen
+
+[33mcommit c96820fc7b69725a0157dc3be594d955bc91d4ef[m
+Merge: ad5055a b943953
+Author: Luu-Tam <94027130+Luu-Tam@users.noreply.github.com>
+Date:   Mon May 9 23:40:58 2022 +0700
+
+    Merge pull request #2 from daquynh2403/devtam
+    
+    Devtam
+
+[33mcommit b943953a9d1d9320170f9995e3f6c28add22bc13[m
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Mon May 9 23:38:15 2022 +0700
+
+    complete product list screen, update menu app, add icon launcher app
+
+[33mcommit 4ebb68b82c4868710dbf8b2b64c7e392ad4fe060[m
+Merge: bd2070e 1f821c8
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Sun May 8 01:13:04 2022 +0700
+
+    merge branch devquynh to devtam
+
+[33mcommit bd2070eceba03792506743273124018541cd450c[m
+Author: Luu-Tam <lt.tam1999@gmail.com>
+Date:   Sun May 8 00:47:45 2022 +0700
+
+    delete button send email
+
+[33mcommit ad5055af5a23a550b8047b10a2894b3ed774c3f3[m
+Merge: cf2fd5e 2231d13
+Author: Luu-Tam <94027130+Luu-Tam@users.noreply.github.com>
+Date:   Sun May 8 00:41:51 2022 +0700
+
+    Merge pull request #1 from daquynh2403/devtam
+    
+    init branch devtam
+
+[33mcommit 2231d132c933e62bcf5ff52484063d1fd641c0c5[m
+Author: Luu-Tam <1751010136thanh@ou.edu.vn>
+Date:   Sun May 8 00:27:44 2022 +0700
+
+    init branch devtam
+
+[33mcommit 1f821c8b89c578cf94a46966f9a4b18152d39ca1[m[33m ([m[1;31morigin/devquynh[m[33m)[m
+Author: @daquynh2403 <daquynh2403@gmail.com>
+Date:   Sat May 7 18:38:54 2022 +0700
+
+    list shoes
+
+[33mcommit 43c641f2569735deb7d8250d201998084601cf79[m
+Author: @daquynh2403 <daquynh2403@gmail.com>
+Date:   Sat May 7 18:36:32 2022 +0700
+
+    update on flipper and recycle view
+
+[33mcommit cf2fd5eefff910a389e7a1afd38b0242dab6015a[m
+Author: DaQuynh <95295459+daquynh2403@users.noreply.github.com>
+Date:   Thu May 5 01:14:45 2022 +0700
+
+    Create README.md
+
+[33mcommit a924837836dc34887b7e3b25e747a1d34f9c7ff7[m
+Author: @daquynh2403 <daquynh2403@gmail.com>
+Date:   Thu May 5 01:14:22 2022 +0700
+
+    Initial commit
