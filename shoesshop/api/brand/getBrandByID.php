@@ -8,12 +8,12 @@
     $db = new db();
     $connect = $db->connect();
     $brand = new brand($connect);
-    $brand->id = isset($_GET['id']) ? $_GET['id'] : die();
+    $brand->brandID = isset($_GET['brandID']) ? $_GET['brandID'] : die();
 
     $brand->show();
 
     $brand_item = array(
-        'id' => $brand->id,
+        'brandID' => $brand->brandID,
         'name' => $brand->name,
         'description' => $brand->description,
         'image' => $brand->image,

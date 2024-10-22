@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ldq.ltdd_cs92_nhom6_shoesshoppingapp">
+    package="com.ltdd.shoesshoppingapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".localdata.MainApplication"
+        android:name="com.ltdd.shoesshoppingapp.localdata.MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,7 +15,17 @@
         android:theme="@style/Theme.LTDD_CS92_Nhom6_ShoesShoppingApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".MainActivity"
+            android:name="com.ltdd.shoesshoppingapp.ui.login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ltdd.shoesshoppingapp.ui.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.ltdd.shoesshoppingapp.MainActivity"
+            android:hardwareAccelerated="false"
+            android:exported="false" />
+        <activity
+            android:name="com.ltdd.shoesshoppingapp.ui.splash_sreen.SplashScreenActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>

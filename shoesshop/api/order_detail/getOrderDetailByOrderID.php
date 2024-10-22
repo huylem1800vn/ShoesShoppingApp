@@ -7,10 +7,10 @@
 
     $db = new db();
     $connect = $db->connect();
-    $order_detail = new order_detail($connect);
-    $order_detail->order_id = isset($_GET['order_id']) ? $_GET['order_id'] : die();
+    $orderdetail = new orderdetail($connect);
+    $orderdetail->orderID = isset($_GET['orderID']) ? $_GET['orderID'] : die();
 
-    $read = $order_detail->show();
+    $read = $orderdetail->show();
 
     $num = $read->rowCount();
     if($num > 0){
@@ -18,16 +18,17 @@
 
         while($row = $read->fetch(PDO::FETCH_ASSOC)){
             extract($row);
+            
             $order_detail_item = array(
-                'id' => $id,
-                'order_id' => $order_id,
-                'product_id' => $product_id,
+                'orderDetailID' => $orderDetailID,
+                'orderID' => $orderID,
+                'productID' => $productID,
                 'size' => $size,
                 'quantity' => $quantity,
-                'total_amount' => $total_amount,
-                'product_name' => $product_name,
+                'totalAmount' => $totalAmount,
+                'productName' => $productName,
                 'image' => $image,
-                'product_price' => $product_price,
+                'productPrice' => $productPrice
             );
             array_push($array_order_detail, $order_detail_item);
         }

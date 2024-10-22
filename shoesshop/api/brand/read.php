@@ -20,7 +20,7 @@
             extract($row);
 
             $brand_item = array(
-                'id' => $id,
+                'brandID' => $brandID,
                 'name' => $name,
                 'description' => $description,
                 'image' => $image,

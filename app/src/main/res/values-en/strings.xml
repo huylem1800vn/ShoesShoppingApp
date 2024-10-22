@@ -32,4 +32,13 @@
     <string name="no">No</string>
     <string name="order_done">Order Success!</string>
     <string name="error_data">Not enough data!</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="not_a_member">"Not a member? "</string>
+    <string name="register_now">Register now</string>
+    <string name="sign_up">Sign up</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>

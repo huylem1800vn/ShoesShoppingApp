@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.ldq.ltdd_cs92_nhom6_shoesshoppingapp"
+        applicationId "com.ltdd.shoesshoppingapp"
         minSdk 24
         targetSdk 32
         versionCode 1
@@ -57,4 +57,7 @@ dependencies {
     // JSON Parsing
     implementation 'com.google.code.gson:gson:2.8.8'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation group: 'at.favre.lib', name: 'bcrypt', version: '0.9.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

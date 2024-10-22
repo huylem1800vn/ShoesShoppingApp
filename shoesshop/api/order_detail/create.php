@@ -9,17 +9,17 @@
 
     $db = new db();
     $connect = $db->connect();
-    $order_detail = new order_detail($connect);
+    $orderdetail = new orderdetail($connect);
 
     $data = json_decode(file_get_contents("php://input"));
 
-    $order_detail->order_id = $data->order_id;
-    $order_detail->product_id = $data->product_id;
-    $order_detail->size = $data->size;
-    $order_detail->quantity = $data->quantity;
-    $order_detail->total_amount = $data->total_amount;
+    $orderdetail->orderID = $data->orderID;
+    $orderdetail->productID = $data->productID;
+    $orderdetail->size = $data->size;
+    $orderdetail->quantity = $data->quantity;
+    $orderdetail->totalAmount = $data->totalAmount;
 
-    if($order_detail->create()){
+    if($orderdetail->create()){
         echo json_encode(array('message'=>'Order Detail Created'));
     } else {
         echo json_encode(array('message'=>'Order Detail Not Created'));

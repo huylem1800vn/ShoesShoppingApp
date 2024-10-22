@@ -20,16 +20,21 @@
             extract($row);
 
             $product_item = array(
-                'id' => $id,
+                'productID' => $productID,
                 'name' => $name,
                 'price' => $price,
-                'promotional_price' => $promotional_price,
+                'promotionalPrice' => $promotionalPrice,
                 'description' => $description,
-                'per_red' => $per_red,
-                'image_1' => $image_1,
-                'image_2' => $image_2,
-                'image_3' => $image_3,
-                'brand_id' => $brand_id
+                'perRed' => $perRed,
+                'image1' => $image1,
+                'image2' => $image2,
+                'image3' => $image3,
+                'image4' => $image4,
+                'image5' => $image5,
+                'brandID' => $brandID,
+                'brandName' => $brandName,
+                'categoryID' => $categoryID,
+                'categoryName' => $categoryName
             );
             array_push($array_product, $product_item);
         }

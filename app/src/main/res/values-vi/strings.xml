@@ -32,4 +32,13 @@
     <string name="delete_question_dialog">Bạn có chắc muốn xóa sản phẩm này?</string>
     <string name="order_done">Đặt hàng thành công!</string>
     <string name="error_data">Dữ liệu chưa đủ!</string>
+    <string name="login">Đăng nhập</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="username">Tên tài khoản</string>
+    <string name="password">Mật khẩu</string>
+    <string name="or">Hoặc</string>
+    <string name="not_a_member">"Bạn chưa có tài khoản? "</string>
+    <string name="register_now">Đăng ký ngay</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
 </resources>

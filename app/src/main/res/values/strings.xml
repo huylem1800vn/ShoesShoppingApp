@@ -23,9 +23,9 @@
     <string name='description'>Description:</string>
     <string name='search_question'>What do you want to search?</string>
     <string name='add_to_cart'>ADD TO CART</string>
-    <string name='customer_name'>Customer name:</string>
-    <string name='address'>Address:</string>
-    <string name='phone'>Phone:</string>
+    <string name='customer_name'>Customer name</string>
+    <string name='address'>Address</string>
+    <string name='phone'>Phone</string>
     <string name='order_date'>Order date:</string>
     <string name='total_amount'>Total amount:</string>
     <string name='order'>Order</string>
@@ -46,4 +46,13 @@
     <string name="no">No</string>
     <string name="order_done">Order Success!</string>
     <string name="error_data">Not enough data!</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="not_a_member">"Not a member? "</string>
+    <string name="register_now">Register now</string>
+    <string name="sign_up">Sign up</string>
+    <string name="confirm_password">Confirm password</string>
 </resources>

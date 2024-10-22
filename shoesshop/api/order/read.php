@@ -20,12 +20,22 @@
             extract($row);
 
             $order_item = array(
-                'id' => $id,
-                'customer_name' => $customer_name,
-                'customer_address' => $customer_address,
-                'customer_phone' => $customer_phone,
-                'total_amount' => $total_amount,
-                'order_date' => $order_date,
+                'orderID' => $orderID,
+                'customerName' => $customerName,
+                'customerAddress' => $customerAddress,
+                'customerPhone' => $customerPhone,
+                'createDate' => $createDate,
+                'orderDate' => $orderDate,
+                'totalAmount' => $totalAmount,
+                'deliveryDate' => $deliveryDate,
+                'createUser' => $createUser,
+                'confirmUser' => $confirmUser,
+                'shipper' => $shipper,
+                'orderStatus' => $orderStatus,
+                'orderStatusName' => $orderStatusName,
+                'shipperName' => $shipperName,
+                'confirmUserName' => $confirmUserName,
+                'createUserName' => $createUserName
             );
             array_push($array_order, $order_item);
         }

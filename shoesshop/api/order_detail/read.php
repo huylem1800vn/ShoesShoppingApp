@@ -7,8 +7,8 @@
 
     $db = new db();
     $connect = $db->connect();
-    $order_detail = new order_detail($connect);
-    $read = $order_detail->read();
+    $orderdetail = new orderdetail($connect);
+    $read = $orderdetail->read();
 
     $num = $read->rowCount();
 
@@ -20,15 +20,15 @@
             extract($row);
 
             $order_detail_item = array(
-                'id' => $id,
-                'order_id' => $order_id,
-                'product_id' => $product_id,
+                'orderDetailID' => $orderDetailID,
+                'orderID' => $orderID,
+                'productID' => $productID,
                 'size' => $size,
                 'quantity' => $quantity,
-                'total_amount' => $total_amount,
-                'product_name' => $product_name,
+                'totalAmount' => $totalAmount,
+                'productName' => $productName,
                 'image' => $image,
-                'product_price' => $product_price,
+                'productPrice' => $productPrice,
             );
             array_push($array_order_detail, $order_detail_item);
         }

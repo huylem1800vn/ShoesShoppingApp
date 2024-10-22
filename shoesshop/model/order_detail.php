@@ -1,16 +1,16 @@
 <?php 
-    class order_detail{
+    class orderdetail{
         private $conn;
 
-        public $id;
-        public $order_id;
-        public $product_id;
+        public $orderdetailID;
+        public $orderID;
+        public $productID;
         public $size;
         public $quantity;
-        public $total_amount;
-        public $product_name;
+        public $totalAmount;
+        public $productName;
         public $image;
-        public $product_price;
+        public $productPrice;
 
         //connect database
         public function __construct($db){
@@ -19,40 +19,40 @@
 
         //read data
         public function read(){
-            $query = "SELECT * FROM `order_detail`";
+            $query = "SELECT * FROM `orderdetail`";
             $statement = $this->conn->prepare($query);
             $statement->execute();
             return $statement;
         }
 
         public function show(){
-            $query = "SELECT `order_detail`.*, `product`.name AS product_name, `product`.image_1 AS image, `product`.promotional_price AS product_price
-            FROM `order_detail` 
+            $query = "SELECT `orderdetail`.*, `product`.name AS productName, `product`.image1 AS image, `product`.promotionalPrice AS productPrice
+            FROM `orderdetail` 
             LEFT JOIN `product`
-            ON `order_detail`.product_id = `product`.id
-            WHERE order_id=?";
+            ON `orderdetail`.productID = `product`.productID
+            WHERE orderID=?";
             $statement = $this->conn->prepare($query);
-            $statement->bindParam(1, $this->order_id);
+            $statement->bindParam(1, $this->orderID);
             $statement->execute();
             return $statement;
         }
 
         public function create(){
-            $query = "INSERT INTO `order_detail` SET order_id=:order_id, product_id=:product_id, size=:size, quantity=:quantity, total_amount=:total_amount";
+            $query = "INSERT INTO `orderdetail` SET orderID=:orderID, productID=:productID, size=:size, quantity=:quantity, totalAmount=:totalAmount";
 
             $statement = $this->conn->prepare($query);
             //clean data
-            $this->order_id = htmlspecialchars(strip_tags($this->order_id));
-            $this->product_id = htmlspecialchars(strip_tags($this->product_id));
+            $this->orderID = htmlspecialchars(strip_tags($this->orderID));
+            $this->productID = htmlspecialchars(strip_tags($this->productID));
             $this->size = htmlspecialchars(strip_tags($this->size));
             $this->quantity = htmlspecialchars(strip_tags($this->quantity));
-            $this->total_amount = htmlspecialchars(strip_tags($this->total_amount));
+            $this->totalAmount = htmlspecialchars(strip_tags($this->totalAmount));
             //bind data
-            $statement->bindParam(':order_id', $this->order_id);
-            $statement->bindParam(':product_id', $this->product_id);
+            $statement->bindParam(':orderID', $this->orderID);
+            $statement->bindParam(':productID', $this->productID);
             $statement->bindParam(':size', $this->size);
             $statement->bindParam(':quantity', $this->quantity);
-            $statement->bindParam(':total_amount', $this->total_amount);
+            $statement->bindParam(':totalAmount', $this->totalAmount);
             if($statement->execute()){
                 return true;
             }

@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "LTDD_CS92_Nhom6_ShoesShoppingApp"
+rootProject.name = "ShoesShoppingApp"
 include ':app'

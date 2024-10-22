@@ -115,6 +115,72 @@
                 android:textColor="?attr/text_color"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/effect_item_menu">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_login"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/login"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/baloo_tamma_2_regular"
+                android:paddingLeft="20dp"
+                android:textColor="?attr/text_color"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="25dp"
+            android:background="@drawable/effect_item_menu"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_logout"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/logout"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/baloo_tamma_2_regular"
+                android:paddingLeft="20dp"
+                android:textColor="?attr/text_color"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

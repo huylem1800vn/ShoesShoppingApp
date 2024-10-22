@@ -13,12 +13,25 @@
 
     $data = json_decode(file_get_contents("php://input"));
 
-    $order->id = $data->id;
-    $order->customer_name = $data->customer_name;
-    $order->customer_address = $data->customer_address;
-    $order->customer_phone = $data->customer_phone;
-    $order->total_amount = $data->total_amount;
-    $order->order_date = $data->order_date;
+    $order->orderID = $data->orderID;
+    $order->customerName = $data->customerName;
+    $order->customerAddress = $data->customerAddress;
+    $order->customerPhone = $data->customerPhone;
+    $order->orderDate = $data->orderDate;
+    $order->createDate = $data->orderDate;
+    $order->totalAmount = $data->totalAmount;
+    $order->deliveryDate =$data->orderDate;
+    $order->createUser = '1';
+    $order->confirmUser = '';
+    $order->shipper = '';
+    $order->orderStatus = 1;
+    // $order->createDate = $data->createDate;
+    // $order->totalAmount = $data->totalAmount;
+    // $order->deliveryDate = $data->deliveryDate;
+    // $order->createUser = $data->createUser;
+    // $order->confirmUser = $data->confirmUser;
+    // $order->shipper = $data->shipper;
+    // $order->orderStatus = $data->orderStatus;
 
     if($order->create()){
         echo json_encode(array('message'=>'Order Created'));

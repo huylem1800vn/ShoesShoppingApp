@@ -2,10 +2,10 @@
 //connect database PDO
 class db{
 
-    private $servername = "localhost:3308";
+    private $servername = "localhost:3306";
     private $username = "root";
     private $password = "";
-    private $dbname = "db_shoesshopping";
+    private $dbname = "db_shoesstore";
     private $conn;
 
     public function connect(){
